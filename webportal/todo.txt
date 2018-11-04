@@ -6,7 +6,7 @@ Day#1:
 
 TODO:
 	- Extract stylesheet to another file and link to the home html page.
-	- Remove spring secuirty feture from main (starting of webportal) page to only personal page.
+	- Apply spring security to personal page
 	- Convert application to template like portal means upon navigation of different links on home page, only content should be chnaged and placed to right side part of webpage, so basic header & navigation list remains same while navigating through different part of website.
 	
 	
