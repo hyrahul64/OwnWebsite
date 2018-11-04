@@ -19,5 +19,11 @@ public class HomeController {
 	{
 		return "about.html";
 	}
+
+	@RequestMapping(value="personal", method = RequestMethod.GET)
+	public String getPersonalPage()
+	{
+		return "personal.html";
+	}
 }
 	
