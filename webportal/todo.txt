@@ -6,7 +6,6 @@ Day#1:
 
 TODO:
 	- Extract stylesheet to another file and link to the home html page.
-	- Apply spring security to personal page
 	- Convert application to template like portal means upon navigation of different links on home page, only content should be chnaged and placed to right side part of webpage, so basic header & navigation list remains same while navigating through different part of website.
 	
 	
