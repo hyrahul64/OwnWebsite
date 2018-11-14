@@ -4,7 +4,14 @@
 <meta charset="ISO-8859-1">
 <!-- <link rel="stylesheet" ref="static/main.css"> -->
 <title>Rahul's Web Portal</title>
+<script type="text/javascript">
+	function showAbout() {
+	  alert('I am about!');
+	  e.preventDefault();
 
+	  return false;
+	}
+</script>
 <style>
 h1 {
 	text-align: center;
@@ -50,7 +57,9 @@ li a:hover:not(.active) {
 		<li><a href="#ideas">Ideas</a></li>
 		<li><a href="#photos">Photos</a></li>
 		<li><a href="personal">Personal</a></li>
-		<li><a href="about">About</a></li>
+		<li><a id = "about_id" href="about" onClick='showAbout();'>About</a></li>
 	</ul>
+	
+	<div id = "page_anchor"></div>
 </body>
 </html>
