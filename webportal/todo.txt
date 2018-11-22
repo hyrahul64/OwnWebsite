@@ -10,5 +10,6 @@ TODO:
 		https://stackoverflow.com/questions/676394/how-to-include-an-html-page-into-another-html-page-without-frame-iframe
 		https://stackoverflow.com/questions/1265887/call-javascript-function-on-hyperlink-click
 		https://stackoverflow.com/questions/15863682/jquery-load-dynamic-page-in-iframe
+		https://tutorialzine.com/2009/09/simple-ajax-website-jquery(ajax page linking through iframe php tutorial)
 	
 	
