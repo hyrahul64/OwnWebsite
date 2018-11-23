@@ -7,10 +7,17 @@
 <script type="text/javascript">
 	function showAbout() {
 	  alert('I am about!');
-	  e.preventDefault();
 
+		document.getElementById("anchor").src = "http://localhost:8080/about.html"
 	  return false;
 	}
+	
+	function showIdeas() {
+		  alert('I am ideas!');
+
+			document.getElementById("anchor").src = "http://localhost:8080/ideas.html"
+		  return false;
+		}
 </script>
 <style>
 h1 {
@@ -54,12 +61,14 @@ li a:hover:not(.active) {
 	<ul>
 		<li> <a class="active" href="#home">Home</a></li>
 		<li><a href=#blog>Blog</a></li>
-		<li><a href="#ideas">Ideas</a></li>
+		<li><a href="#ideas" onClick='showIdeas();'>Ideas</a></li>
 		<li><a href="#photos">Photos</a></li>
 		<li><a href="personal">Personal</a></li>
-		<li><a id = "about_id" href="about" onClick='showAbout();'>About</a></li>
+		<li><a href="#about" onClick='showAbout();'>About</a></li>
 	</ul>
 	
-	<div id = "page_anchor"></div>
+	<div>
+		<iframe id="anchor" src = "" ></iframe>
+	</div>
 </body>
 </html>
