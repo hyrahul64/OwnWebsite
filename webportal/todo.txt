@@ -6,10 +6,13 @@ Day#1:
 
 TODO:
 	- Extract stylesheet to another file and link to the home html page.
-	- Convert application to template like portal means upon navigation of different links on home page, only content should be chnaged and placed to right side part of webpage, so basic header & navigation list remains same while navigating through different part of website.
+		- Convert application to template like portal means upon navigation of different links on home page, only content should be chnaged and placed to right side part of webpage, so basic header & navigation list remains same while navigating through different part of website.
 		https://stackoverflow.com/questions/676394/how-to-include-an-html-page-into-another-html-page-without-frame-iframe
 		https://stackoverflow.com/questions/1265887/call-javascript-function-on-hyperlink-click
 		https://stackoverflow.com/questions/15863682/jquery-load-dynamic-page-in-iframe
 		https://tutorialzine.com/2009/09/simple-ajax-website-jquery(ajax page linking through iframe php tutorial)
+	- Activate tab after click
+	- replace mysql db with in mem db (default db of spring boot)
+	
 	
 	
