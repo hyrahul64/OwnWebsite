@@ -5,39 +5,38 @@
 <!-- <link rel="stylesheet" ref="static/main.css"> -->
 <title>Rahul's Web Portal</title>
 <script type="text/javascript">
-	function showAbout() {
-		document.getElementById("anchor").src = 
-			"http://localhost:8080/about.html";
+
+	function changePage(e) {
+		
+		console.log("function changePage() with event:"+e.type);
+		console.log("event target:"+e.target.id);
+		
+		var target;
+		switch(e.target.id) {
+		case "id_about":
+			target = "http://localhost:8080/about.html";
+			break;
+		case "id_blog":
+			target = "http://localhost:8080/blog.html";
+			break;
+		case "id_ideas":
+			target = "http://localhost:8080/ideas.html";
+			break;
+		case "id_photo":
+			target = "http://localhost:8080/photo.html";
+			break;
+		case "id_personal":
+			target = "http://localhost:8080/personal.html";
+			break;			
+		}
+		
+		document.getElementById("anchor").src = target;
 		
 		var eles = document.querySelector(".active");
 		if(eles !== null) {
 			eles.classList.remove("active");
 		}
-		document.getElementById("id_about").classList.add("active");
-	  return false;
-	}
-	
-	function showIdeas() {
-			document.getElementById("anchor").src =
-				"http://localhost:8080/ideas.html"
-		  return false;
-		}
-	
-	function showPersonal() {
-		document.getElementById("anchor").src =
-			"http://localhost:8080/personal.html"
-		return false;
-	}
-	function showBlog() {
-		document.getElementById("anchor").src =
-			"http://localhost:8080/blog.html"
-	  return false;
-	}
-
-	function showPhoto() {
-		document.getElementById("anchor").src =
-			"http://localhost:8080/photo.html"
-		return false;
+		document.getElementById(e.target.id).classList.add("active");
 	}
 
 </script>
@@ -89,11 +88,11 @@ iframe {
 	<hr/>
 	<ul>
 		<li> <a class="active" href="#home">Home</a></li>
-		<li><a href=#blog onClick='showBlog();'>Blog</a></li>
-		<li><a href="#ideas" onClick='showIdeas();'>Ideas</a></li>
-		<li><a href="#photos" onClick='showPhoto();' >Photos</a></li>
-		<li><a href="#personal" onClick='showPersonal();'>Personal</a></li>
-		<li><a href="#about" id="id_about" onClick='showAbout();'>About</a></li>
+		<li><a href=#blog id="id_blog" onClick='changePage(event);'>Blog</a></li>
+		<li><a href="#ideas" id="id_ideas" onClick='changePage(event);'>Ideas</a></li>
+		<li><a href="#photos" id="id_photo" onClick='changePage(event);' >Photos</a></li>
+		<li><a href="#personal" id="id_personal" onClick='changePage(event);'>Personal</a></li>
+		<li><a href="#about" id="id_about" onClick='changePage(event);'>About</a></li>
 	</ul>
 	
 	<div>
