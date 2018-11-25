@@ -6,14 +6,34 @@
 <title>Rahul's Web Portal</title>
 <script type="text/javascript">
 	function showAbout() {
-		document.getElementById("anchor").src = "http://localhost:8080/about.html"
+		document.getElementById("anchor").src = 
+			"http://localhost:8080/about.html"
 	  return false;
 	}
 	
 	function showIdeas() {
-			document.getElementById("anchor").src = "http://localhost:8080/ideas.html"
+			document.getElementById("anchor").src =
+				"http://localhost:8080/ideas.html"
 		  return false;
 		}
+	
+	function showPersonal() {
+		document.getElementById("anchor").src =
+			"http://localhost:8080/personal.html"
+		return false;
+	}
+	function showBlog() {
+		document.getElementById("anchor").src =
+			"http://localhost:8080/blog.html"
+	  return false;
+	}
+
+	function showPhoto() {
+		document.getElementById("anchor").src =
+			"http://localhost:8080/photo.html"
+		return false;
+	}
+
 </script>
 <style>
 h1 {
@@ -63,10 +83,10 @@ iframe {
 	<hr/>
 	<ul>
 		<li> <a class="active" href="#home">Home</a></li>
-		<li><a href=#blog>Blog</a></li>
+		<li><a href=#blog onClick='showBlog();'>Blog</a></li>
 		<li><a href="#ideas" onClick='showIdeas();'>Ideas</a></li>
-		<li><a href="#photos">Photos</a></li>
-		<li><a href="personal">Personal</a></li>
+		<li><a href="#photos"onClick='showPhoto();' >Photos</a></li>
+		<li><a href="#personal" onClick='showPersonal();'>Personal</a></li>
 		<li><a href="#about" onClick='showAbout();'>About</a></li>
 	</ul>
 	
