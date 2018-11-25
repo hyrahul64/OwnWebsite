@@ -7,7 +7,13 @@
 <script type="text/javascript">
 	function showAbout() {
 		document.getElementById("anchor").src = 
-			"http://localhost:8080/about.html"
+			"http://localhost:8080/about.html";
+		
+		var eles = document.querySelector(".active");
+		if(eles !== null) {
+			eles.classList.remove("active");
+		}
+		document.getElementById("id_about").classList.add("active");
 	  return false;
 	}
 	
@@ -85,9 +91,9 @@ iframe {
 		<li> <a class="active" href="#home">Home</a></li>
 		<li><a href=#blog onClick='showBlog();'>Blog</a></li>
 		<li><a href="#ideas" onClick='showIdeas();'>Ideas</a></li>
-		<li><a href="#photos"onClick='showPhoto();' >Photos</a></li>
+		<li><a href="#photos" onClick='showPhoto();' >Photos</a></li>
 		<li><a href="#personal" onClick='showPersonal();'>Personal</a></li>
-		<li><a href="#about" onClick='showAbout();'>About</a></li>
+		<li><a href="#about" id="id_about" onClick='showAbout();'>About</a></li>
 	</ul>
 	
 	<div>
