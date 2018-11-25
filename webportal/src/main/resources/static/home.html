@@ -4,7 +4,21 @@
 <meta charset="ISO-8859-1">
 <!-- <link rel="stylesheet" ref="static/main.css"> -->
 <title>Rahul's Web Portal</title>
+<script type="text/javascript">
+	function showAbout() {
+	  alert('I am about!');
 
+		document.getElementById("anchor").src = "http://localhost:8080/about.html"
+	  return false;
+	}
+	
+	function showIdeas() {
+		  alert('I am ideas!');
+
+			document.getElementById("anchor").src = "http://localhost:8080/ideas.html"
+		  return false;
+		}
+</script>
 <style>
 h1 {
 	text-align: center;
@@ -54,13 +68,14 @@ iframe {
 	<ul>
 		<li> <a class="active" href="#home">Home</a></li>
 		<li><a href=#blog>Blog</a></li>
-		<li><a href="#ideas">Ideas</a></li>
+		<li><a href="#ideas" onClick='showIdeas();'>Ideas</a></li>
 		<li><a href="#photos">Photos</a></li>
 		<li><a href="personal">Personal</a></li>
-		<li><a href="about">About</a></li>
+		<li><a href="#about" onClick='showAbout();'>About</a></li>
 	</ul>
-	 <iframe src="http://localhost:8080/about.html" >
-            Alternative text for browsers that do not understand IFrames.
-        </iframe>
+	
+	<div>
+		<iframe id="anchor" src = "" ></iframe>
+	</div>
 </body>
 </html>
