@@ -16,6 +16,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/**").permitAll()
 			.and()
 		.formLogin();
+		
+		http
+		.headers()
+		.frameOptions()
+		.sameOrigin();
 	}
 
 }
