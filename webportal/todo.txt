@@ -11,8 +11,9 @@ TODO:
 		https://stackoverflow.com/questions/1265887/call-javascript-function-on-hyperlink-click
 		https://stackoverflow.com/questions/15863682/jquery-load-dynamic-page-in-iframe
 		https://tutorialzine.com/2009/09/simple-ajax-website-jquery(ajax page linking through iframe php tutorial)
-	- Activate tab after click
 	- replace mysql db with in mem db (default db of spring boot)
+	- refactor javascript code in one function
+	- bring back security of persoal page
 	
 	
 	
