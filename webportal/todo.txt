@@ -12,8 +12,11 @@ TODO:
 		https://stackoverflow.com/questions/15863682/jquery-load-dynamic-page-in-iframe
 		https://tutorialzine.com/2009/09/simple-ajax-website-jquery(ajax page linking through iframe php tutorial)
 	- replace mysql db with in mem db (default db of spring boot)
-	- refactor javascript code in one function
 	- bring back security of persoal page
+	- refactor javascript code into separate function
+	- move javascript code in other file
+	- login page
+	- register page
 	
 	
 	
