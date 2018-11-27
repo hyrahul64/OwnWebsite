@@ -13,8 +13,8 @@
 		
 		var target;
 		switch(e.target.id) {
-		case "id_about":
-			target = "http://localhost:8080/about.html";
+		case "id_home":
+			target="";
 			break;
 		case "id_blog":
 			target = "http://localhost:8080/blog.html";
@@ -28,6 +28,9 @@
 		case "id_personal":
 			target = "http://localhost:8080/personal.html";
 			break;			
+		case "id_about":
+			target = "http://localhost:8080/about.html";
+			break;
 		}
 		
 		document.getElementById("anchor").src = target;
@@ -37,6 +40,25 @@
 			eles.classList.remove("active");
 		}
 		document.getElementById(e.target.id).classList.add("active");
+		
+		if(e.target.id === "id_home") {
+			var ele = document.querySelector("#anchor");
+			ele.classList.remove("show");
+			ele.classList.add("hide");
+			
+			var ele = document.querySelector(".login");
+			ele.classList.add("show");	
+		}
+		else {
+			var ele = document.querySelector(".login");
+			ele.classList.remove("show");
+			ele.classList.add("hide");
+			
+			
+			var ele = document.querySelector("#anchor");
+			ele.classList.add("show");
+		}
+			
 	}
 
 </script>
@@ -81,19 +103,41 @@ iframe {
 	border: none;
 }
 
+.login {
+	text-align: right;
+}
+
+.login > a {
+	margin: 0px 3px;
+} 
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;	
+}
+
 </style>
 </head>
 <body>
 	<h1>Welcome to the Rahul Shah's Web Portal..!</h1>
 	<hr/>
+	<div>
 	<ul>
-		<li> <a class="active" href="#home">Home</a></li>
-		<li><a href=#blog id="id_blog" onClick='changePage(event);'>Blog</a></li>
-		<li><a href="#ideas" id="id_ideas" onClick='changePage(event);'>Ideas</a></li>
-		<li><a href="#photos" id="id_photo" onClick='changePage(event);' >Photos</a></li>
-		<li><a href="#personal" id="id_personal" onClick='changePage(event);'>Personal</a></li>
-		<li><a href="#about" id="id_about" onClick='changePage(event);'>About</a></li>
+		<li> <a href="#home"	 id="id_home"  onClick='changePage(event);' class="active">Home</a></li>
+		<li><a href=#blog 		id="id_blog" 	onClick='changePage(event);'>Blog</a></li>
+		<li><a href="#ideas" 	id="id_ideas" 	onClick='changePage(event);'>Ideas</a></li>
+		<li><a href="#photos"	 id="id_photo" onClick='changePage(event);' >Photos</a></li>
+		<li><a href="#persoal" 	id="id_personal" onClick='changePage(event);'>Personal</a></li>
+		<li><a href="#about"	 id="id_about" onClick='changePage(event);'>About</a></li>
 	</ul>
+	</div>
+	<div class="login">
+		<a href="#login">login</a>
+		<a href=#register>Register</a>
+	</div>
 	
 	<div>
 		<iframe id="anchor" src = "" ></iframe>
