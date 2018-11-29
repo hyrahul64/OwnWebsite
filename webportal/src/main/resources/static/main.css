@@ -1,7 +1,58 @@
 @CHARSET "ISO-8859-1";
 
 
-.h1 {
+h1 {
 	text-align: center;
-	color: red;
+	color: teal;
+}
+
+ul {
+	list-style-type:none;
+	background-color: teal;
+	position: fixed;
+	overflow: auto;
+	height: 100%;
+	width: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+li a{
+	display: block;
+	color: black;
+	padding: 10px 40px;
+	text-decoration: none;
+}
+
+li a.active {
+	background-color: #73C6B6;
+	color: white;
+}
+
+li a:hover:not(.active) {
+	background-color: #73C6B6;
+	color: white;
+}
+
+iframe {
+	margin: 0px 10% ;
+	height: 450px;
+	width: 80%;
+	border: none;
+}
+
+.login {
+	text-align: right;
+}
+
+.login > a {
+	margin: 0px 3px;
+} 
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;	
 }
