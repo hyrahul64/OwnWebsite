@@ -13,17 +13,5 @@ public class HomeController {
 	{
 		return "html/home.html";
 	}
-	
-	@RequestMapping(value="about", method = RequestMethod.GET)
-	public String getAboutPage()
-	{
-		return "about.html";
-	}
-
-	@RequestMapping(value="personal", method = RequestMethod.GET)
-	public String getPersonalPage()
-	{
-		return "personal.html";
-	}
 }
 	
