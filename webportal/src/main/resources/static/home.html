@@ -45,9 +45,14 @@
 		case "id_about":
 			target = "about.html";
 			break;
+		case "id_login":
+			target = "login.html";
+			break;
 		}
 		
 		var url = protocol + "://" + ip_address +":" + port + "/" + target;
+		
+		console.log("new url:" + url);
 		
 		document.getElementById("anchor").src = url;
 		
@@ -157,7 +162,7 @@ iframe {
 	</ul>
 	</div>
 	<div class="login">
-		<a href="#login">login</a>
+		<a href="#login" id="id_login" onClick='setNewPage(event);'>login</a>
 		<a href=#register>Register</a>
 	</div>
 	
