@@ -11,35 +11,58 @@
 		console.log("function changePage() with event:"+e.type);
 		console.log("event target:"+e.target.id);
 		
+		setNewPage(e);
+		
+		changeActiveTab(e);
+		
+		showHideLogin(e);
+		
+	}
+	
+	function setNewPage(e) {
+		
+		var protocol = "http";
+		var ip_address = "localhost";
+		var port = "80";
+		
 		var target;
 		switch(e.target.id) {
 		case "id_home":
 			target="";
 			break;
 		case "id_blog":
-			target = "http://localhost:8080/blog.html";
+			target = "blog.html";
 			break;
 		case "id_ideas":
-			target = "http://localhost:8080/ideas.html";
+			target = "ideas.html";
 			break;
 		case "id_photo":
-			target = "http://localhost:8080/photo.html";
+			target = "photo.html";
 			break;
 		case "id_personal":
-			target = "http://localhost:8080/personal.html";
+			target = "personal.html";
 			break;			
 		case "id_about":
-			target = "http://localhost:8080/about.html";
+			target = "about.html";
 			break;
 		}
 		
-		document.getElementById("anchor").src = target;
+		var url = protocol + "://" + ip_address +":" + port + "/" + target;
+		
+		document.getElementById("anchor").src = url;
+		
+	}
+	
+	function changeActiveTab(e) {
 		
 		var eles = document.querySelector(".active");
 		if(eles !== null) {
 			eles.classList.remove("active");
 		}
 		document.getElementById(e.target.id).classList.add("active");
+	}
+	
+	function showHideLogin(e) {
 		
 		if(e.target.id === "id_home") {
 			var ele = document.querySelector("#anchor");
@@ -57,8 +80,7 @@
 			
 			var ele = document.querySelector("#anchor");
 			ele.classList.add("show");
-		}
-			
+		}		
 	}
 
 </script>
