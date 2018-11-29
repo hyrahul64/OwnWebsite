@@ -5,7 +5,7 @@ Day#1:
 	- Initialize git repo and going to push into my github account right after writing this.
 
 TODO:
-	- Extract stylesheet to another file and link to the home html page.
+		- Extract stylesheet to another file and link to the home html page.
 		- Convert application to template like portal means upon navigation of different links on home page, only content should be chnaged and placed to right side part of webpage, so basic header & navigation list remains same while navigating through different part of website.
 		https://stackoverflow.com/questions/676394/how-to-include-an-html-page-into-another-html-page-without-frame-iframe
 		https://stackoverflow.com/questions/1265887/call-javascript-function-on-hyperlink-click
@@ -13,10 +13,11 @@ TODO:
 		https://tutorialzine.com/2009/09/simple-ajax-website-jquery(ajax page linking through iframe php tutorial)
 	- replace mysql db with in mem db (default db of spring boot)
 	- bring back security of persoal page
-	- refactor javascript code into separate function
-	- move javascript code in other file
-	- login page
+		- refactor javascript code into separate function
+		- move javascript code in other file
+		- login page
 	- register page
+	- adding security (SSL)
 	
 	
 	
