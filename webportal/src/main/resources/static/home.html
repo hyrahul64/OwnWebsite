@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<!-- <link rel="stylesheet" ref="static/main.css"> -->
+<link rel="stylesheet" ref="http://localhost:80/main.css">
 <title>Rahul's Web Portal</title>
 <script type="text/javascript">
 
@@ -15,7 +15,7 @@
 		
 		changeActiveTab(e);
 		
-		showHideLogin(e);
+		//showHideLogin(e);
 		
 	}
 	
@@ -56,6 +56,8 @@
 		
 		document.getElementById("anchor").src = url;
 		
+		showHideLogin(e);
+		
 	}
 	
 	function changeActiveTab(e) {
@@ -68,7 +70,7 @@
 	}
 	
 	function showHideLogin(e) {
-		
+		console.log("showhide");
 		if(e.target.id === "id_home") {
 			var ele = document.querySelector("#anchor");
 			ele.classList.remove("show");
