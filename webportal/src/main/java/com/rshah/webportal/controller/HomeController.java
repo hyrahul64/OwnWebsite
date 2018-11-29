@@ -11,7 +11,7 @@ public class HomeController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String getHomePage()
 	{
-		return "home.html";
+		return "html/home.html";
 	}
 	
 	@RequestMapping(value="about", method = RequestMethod.GET)

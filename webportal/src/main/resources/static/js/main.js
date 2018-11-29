@@ -43,7 +43,7 @@
 			break;
 		}
 		
-		var url = protocol + "://" + ip_address +":" + port + "/" + target;
+		var url = protocol + "://" + ip_address +":" + port + "/"+ "html"+"/" + target;
 		
 		console.log("new url:" + url);
 		
