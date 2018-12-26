@@ -18,6 +18,7 @@ TODO:
 		- login page
 	- register page
 	- adding security (SSL)
+	- iframe page not loaded from mobile
 	
 	
 	

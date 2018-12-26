@@ -33,7 +33,7 @@
 			target = "photo.html";
 			break;
 		case "id_personal":
-			target = "personal.html";
+			target = "login.html";
 			break;			
 		case "id_about":
 			target = "about.html";
