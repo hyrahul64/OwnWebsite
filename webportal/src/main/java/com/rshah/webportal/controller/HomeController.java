@@ -46,5 +46,14 @@ public class HomeController {
 			return null;
 		}
 	}
+	
+	@RequestMapping(value = "/html/register", method = RequestMethod.POST)
+	public ModelAndView registerUser(@RequestParam("userName") String username,
+			@RequestParam("password") String password, @RequestParam("firstName") String firstName,
+			@RequestParam("lastName") String lastName, @RequestParam("email") String email)
+	{
+		userService.createUser(username, password, firstName, lastName, email);
+		return null;
+	}
 }
 	

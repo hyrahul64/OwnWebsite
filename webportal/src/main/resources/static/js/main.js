@@ -40,7 +40,9 @@
 			break;
 		case "id_login":
 			target = "login.html";
-			break;
+			break; 
+		case "id_register":
+			target ="register.html";
 		}
 		
 		var url = protocol + "://" + ip_address +":" + port + "/"+ "html"+"/" + target;

@@ -6,6 +6,11 @@ h1 {
 	color: teal;
 }
 
+.welcome {
+	color: teal;
+	text-align: right;
+}
+
 ul {
 	list-style-type:none;
 	background-color: teal;
@@ -33,6 +38,8 @@ li a:hover:not(.active) {
 	background-color: #73C6B6;
 	color: white;
 }
+
+
 
 iframe {
 	margin: 0px 10% ;

@@ -16,14 +16,15 @@ TODO:
 		- refactor javascript code into separate function
 		- move javascript code in other file
 		- login page
-	- register page
+		- register page
 	- adding security (SSL)
 	- iframe page not loaded from mobile
-	- create table of user by role wise and implement login functionality
+		- create table of user by role wise and implement login functionality
 	- start writing knowledge articles
 	- implement session/logout mechanism
 	- implement number of user visited
 	- implement file download
+	- error checking in registering user
 	
 	
 	

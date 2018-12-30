@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.rshah.webportal.common.UserRole;
 import com.rshah.webportal.domain.User;
 import com.rshah.webportal.jpa.UserRepository;
 
@@ -31,6 +32,18 @@ public class UserServiceImpl implements UserService {
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public boolean createUser(String username, String password, String firstName, String lastName, String email) {
+
+		if(username.isEmpty() || password.isEmpty())
+		{
+			return false;
+		}
+		User newUser = new User(username, firstName, lastName, password, email, UserRole.USER.name());
+		userRepository.save(newUser);
+		return true;
 	}
 
 }
