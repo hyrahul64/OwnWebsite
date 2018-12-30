@@ -21,6 +21,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.headers()
 		.frameOptions()
 		.disable();
+		
+		//This allows POST req handling
+		http
+		.csrf()
+		.disable();
+		
 	}
 
 }

@@ -22,6 +22,8 @@ TODO:
 	- create table of user by role wise and implement login functionality
 	- start writing knowledge articles
 	- implement session/logout mechanism
+	- implement number of user visited
+	- implement file download
 	
 	
 	

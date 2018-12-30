@@ -1,14 +1,20 @@
 package com.rshah.webportal.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.rshah.webportal.service.UserService;
+
 @Controller
 @RequestMapping(value="/")
 public class HomeController {
+	
+	@Autowired
+	private UserService userService;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String getHomePage()
@@ -17,14 +23,13 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/html/login",method = RequestMethod.POST)
-	public ModelAndView getPersonalPage(@RequestParam("userName") String userName,
+	public ModelAndView getPersonalPage(@RequestParam("userName") String username,
 			@RequestParam("password") String password)
 	{
 		System.out.println("getPersonalPage()");
-		System.out.println("user name:" + userName + " password:" + password);
+		System.out.println("user name:" + username + " password:" + password);
 		
-		if(userName.compareTo("rahul") == 0 && 
-				password.compareTo("rahul444") == 0)
+		if(userService.authenticateUser(username, password) == true)
 		{
 			System.out.println("validated password");
 			ModelAndView modelView = new ModelAndView();
@@ -35,7 +40,6 @@ public class HomeController {
 /*			modelView.addObject("iframe",
 					"personal.html");*/
 			return modelView;
-		
 		}
 		else
 		{
