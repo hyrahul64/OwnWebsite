@@ -34,6 +34,7 @@ public class HomeController {
 			System.out.println("validated password");
 			ModelAndView modelView = new ModelAndView();
 			modelView.setViewName("personal");
+			modelView.addObject("user", username);
 			//This didn't work in way I thought
 			//returned view 'personal' is replaced at login view (caller) so no
 			//need to do like this

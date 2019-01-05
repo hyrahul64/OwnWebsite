@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h1>Welcome to the Rahul Shah's Web Portal..!</h1>
-	<div class="welcome">Welcome guest!</div>
+	<div class="welcome">Welcome <span th:text = "${user}"></span></div>
 	<hr/>
 	<div>
 	<ul>
@@ -29,7 +29,7 @@
 	</div>
 	
 	<div>
-		<iframe id="anchor" src = "" ></iframe>
+		<iframe id="anchor" src = ""></iframe>
 	</div>
 </body>
 </html>
