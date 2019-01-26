@@ -1,0 +1,12 @@
+/* div.carousel-item > * {
+  height: "400px";
+}
+ */
+
+.carousel {
+  height: 300px !important;
+}
+
+.carousel-item img {
+  height: 400px;
+}

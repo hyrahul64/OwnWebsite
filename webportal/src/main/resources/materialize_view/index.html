@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Materialize Theme</title>
+  </head>
+
+  <body>
+    <nav class="teal">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Rahul</a>
+          <a href="#" class="button-collapse" data-activates="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li class="active"><a>Home</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Ideas</a></li>
+            <li><a>Photos</a></li>
+            <li><a>Personal</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+
+          <ul class="side-nav" id="mobile-nav">
+            <li><a>Home</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Ideas</a></li>
+            <li><a>Photos</a></li>
+            <li><a>Personal</a></li>
+            <li><a href="about.html"> About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="carousel carousel-slider center" data-indicators="true">
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05895.jpg" />
+        </a>
+        <a href="#one!" class="carousel-item">
+          <img src="img/carousel/DSC04269.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05014.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05288.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05310.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05441.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05624.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05642.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05881.jpg" />
+        </a>
+        <a href="#two" class="carousel-item">
+          <img src="img/carousel/DSC05734.jpg" />
+        </a>
+      </div>
+      <h3 class="teal-text center">Welcome to Rahul Shah's Web Portal</h3>
+      <div class="fixed-action-btn">
+        <button class="btn-floating teal waves-effect waves-light">
+          <a href="#modal-login" id="login" class="modal-trigger">
+            <i class="material-icons">person</i>
+          </a>
+        </button>
+        <button class="btn-floating teal waves-effect waves-light">
+          <a href="#modal-register" id="login" class="modal-trigger">
+            <i class="material-icons">person_add</i>
+          </a>
+        </button>
+      </div>
+    </section>
+    <!-- Login Modal -->
+    <div class="modal" id="modal-login">
+      <div class="modal-content">
+        <h4 class="center-align">Login</h4>
+        <form>
+          <div class="input-field inline">
+            <input type="text" id="username2" placeholder="User name" />
+            <label for="username2">User name:</label>
+          </div>
+          <div class="input-field inline">
+            <input type="password" placeholder="Password" id="password2" />
+            <label for="password2">Password</label>
+          </div>
+          <div class="modal-footer">
+            <input
+              type="submit"
+              value="Submit"
+              class="btn modal-action
+            modal-close"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Register Modal -->
+    <div class="modal" id="modal-register">
+      <div class="modal-content">
+        <h4 class="center-align">Register</h4>
+        <form>
+          <div class="input-field inline">
+            <input placeholder="User name" id="user-name" type="text" />
+            <label for="user-name">User name:</label>
+          </div>
+          <div class="input-field inline">
+            <input type="password" id="password" placeholder="Password" />
+            <label for="password">Password:</label>
+          </div>
+          <div class="input-field inline">
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Retype password"
+            />
+            <label for="confirm-password">Confrim password:</label>
+          </div>
+          <br />
+          <div class="input-field inline">
+            <input type="text" id="first-name" placeholder="First name" />
+            <label for="first-name">First name:</label>
+          </div>
+          <div class="input-field inline">
+            <input type="text" placeholder="Last name" id="last-name" />
+            <label for="last-name">Last name:</label>
+          </div>
+          <div class="input-field inline">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email id"
+              class="validate"
+            />
+            <label for="email" data-error="Invalid" data-success="Valid"
+              >Email:</label
+            >
+          </div>
+          <div class="modal-footer">
+            <input
+              type="submit"
+              value="Submit"
+              class="modal-action modal-close btn"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Custom JS & jQuery here
+      });
+
+      //Init collapse menu sidebar
+      $(".button-collapse").sideNav();
+      $("#modal-register").modal();
+      $("#modal-login").modal();
+      $(".carousel").carousel();
+    </script>
+  </body>
+</html>
