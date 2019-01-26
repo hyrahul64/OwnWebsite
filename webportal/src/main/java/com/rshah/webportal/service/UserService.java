@@ -8,4 +8,6 @@ public interface UserService {
 	
 	boolean createUser(String username, String password,
 			String firstName, String lastName, String email);
+	
+	boolean checkUsernameAvailibility(String username);
 }

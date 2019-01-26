@@ -25,7 +25,8 @@ TODO:
 	- implement number of user visited
 	- implement file download
 	- error checking in registering user
-		https://stackoverflow.com/questions/44758244/spring-mvc-check-username-availability-with-ajax
+		username availibility
+			https://stackoverflow.com/questions/44758244/spring-mvc-check-username-availability-with-ajax
 	- welecome with username (https://www.baeldung.com/thymeleaf-in-spring-mvc)
 	
 	

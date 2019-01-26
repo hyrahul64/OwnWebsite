@@ -1,10 +1,16 @@
 package com.rshah.webportal.controller;
 
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.rshah.webportal.service.UserService;
@@ -55,6 +61,23 @@ public class HomeController {
 	{
 		userService.createUser(username, password, firstName, lastName, email);
 		return null;
+	}
+
+	@RequestMapping(value="/checkUsernameAvailibility/{username}",
+			method = RequestMethod.GET, produces = {"text/html"})
+	@ResponseBody
+	public void checkUsernameAvailibility(@PathVariable("username") String username,
+			HttpServletResponse resp) throws IOException
+	{
+		System.out.println("Got username:"+username);
+		resp.setContentType("text/html");
+		resp.setCharacterEncoding("UTF-8");
+		resp.setHeader("Access-Control-Allow-Origin", "*");
+	   // resp.addHeader("Access-Control-Allow-Methods","GET, OPTIONS, HEAD, PUT, POST");
+	    resp.getWriter().write("<div>from server:" + username +"</div>");
+		//return "<div>from server:" + username +"</div>";
+		
+		
 	}
 }
 	

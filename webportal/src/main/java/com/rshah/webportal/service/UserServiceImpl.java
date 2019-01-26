@@ -46,4 +46,18 @@ public class UserServiceImpl implements UserService {
 		return true;
 	}
 
+	
+	@Override
+	public boolean checkUsernameAvailibility(String username) {
+		
+		List<User> users = (List<User>) userRepository.findAll();
+		
+		for (User user : users) {
+			if(username.compareTo(user.getUsername()) == 0)
+				return false;
+		}
+		
+		return true;
+	}
+
 }

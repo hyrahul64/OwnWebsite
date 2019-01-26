@@ -4,6 +4,8 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
+<script src="http://localhost:80/js/username_availibility.js" type="text/javascript"></script>
+
 <style>
 	tr {
 		height: 40px;
@@ -17,7 +19,8 @@
 <table>
 <tr>
 	<td>User Name:*</td>
-	<td><input type="text" name="userName"></td>
+	<td><input type="text" name="userName" id ="username" onBlur=checkUsernameAvailibility()></td>
+	<td><label id="status"></label></td>
 </tr>
 <tr>
 	<td>Password:*</td>
